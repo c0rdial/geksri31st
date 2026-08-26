@@ -135,3 +135,10 @@
   line-height: 1.5;
   opacity: 0.9;
 }
+
+.ambient-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
