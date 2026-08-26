@@ -8,8 +8,8 @@ html, body {
 }
 
 body {
-  font-family: Georgia, 'Iowan Old Style', serif;
-  background: #6d93b8;
+  font-family: Helvetica, Arial, sans-serif;
+  background: #789ebf;
   color: #fdfdfd;
   min-height: 100vh;
 }

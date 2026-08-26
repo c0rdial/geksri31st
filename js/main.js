@@ -14,7 +14,6 @@ function init() {
 
   const visual = document.getElementById('wishes-visual');
   const lightboxRoot = document.getElementById('lightbox-root');
-  const lightbox = mountLightbox(lightboxRoot);
 
   if (isMobileViewport(window.innerWidth)) {
     const video = document.createElement('video');
@@ -23,9 +22,11 @@ function init() {
     video.autoplay = true;
     video.loop = true;
     video.muted = true;
+    video.setAttribute('muted', '');
     video.playsInline = true;
     visual.appendChild(video);
   } else {
+    const lightbox = mountLightbox(lightboxRoot);
     mountPhotoWall(visual, wishes, (wish) => lightbox.open(wish));
   }
   renderWishesList(document.getElementById('wishes-list-container'), wishes);

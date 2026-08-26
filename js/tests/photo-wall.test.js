@@ -43,3 +43,36 @@ test('assignFloatDelays returns one timing per photo within configured ranges', 
     assert.ok(t.delay >= 0 && t.delay <= 4);
   }
 });
+
+test('generatePositions retries after a colliding candidate', () => {
+  const rng = sequenceRng([0, 0, 0, 0, 0.8, 0.8]);
+  const positions = generatePositions(
+    2,
+    { width: 1000, height: 1000 },
+    { width: 100, height: 100 },
+    { rng, minGap: 10, maxAttempts: 5 },
+  );
+  const [a, b] = positions;
+  assert.equal(a.x, 0);
+  assert.equal(a.y, 0);
+  const overlaps = Math.abs(a.x - b.x) < 110 && Math.abs(a.y - b.y) < 110;
+  assert.equal(overlaps, false);
+});
+
+test('generatePositions clamps to (0,0) when itemSize exceeds bounds', () => {
+  const positions = generatePositions(3, { width: 100, height: 100 }, { width: 200, height: 200 });
+  for (const p of positions) {
+    assert.equal(p.x, 0);
+    assert.equal(p.y, 0);
+    assert.ok(Number.isFinite(p.x) && Number.isFinite(p.y));
+  }
+});
+
+test('assignFloatDelays uses sane default ranges when no options are passed', () => {
+  const timings = assignFloatDelays(5);
+  assert.equal(timings.length, 5);
+  for (const t of timings) {
+    assert.ok(t.duration >= 5 && t.duration <= 9);
+    assert.ok(t.delay >= 0 && t.delay <= 4);
+  }
+});

@@ -33,6 +33,9 @@ export function mountLightbox(root) {
   overlay.addEventListener('click', (event) => {
     if (event.target === overlay) close();
   });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !overlay.hidden) close();
+  });
 
   return { open, close };
 }

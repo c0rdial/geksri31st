@@ -1,3 +1,4 @@
+// Replace these three placeholder entries with real photos and wishes before launch.
 export const wishes = [
   {
     image: 'images/placeholder1.svg',

@@ -37,7 +37,7 @@ export function assignFloatDelays(count, options = {}) {
 export function mountPhotoWall(container, wishes, onPhotoClick) {
   const bounds = { width: container.clientWidth, height: container.clientHeight };
   const itemSize = { width: 140, height: 140 };
-  const positions = generatePositions(wishes.length, bounds, itemSize);
+  const positions = generatePositions(wishes.length, bounds, itemSize, { maxAttempts: 150 });
   const timings = assignFloatDelays(wishes.length);
 
   wishes.forEach((wish, i) => {
