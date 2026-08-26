@@ -110,3 +110,28 @@
     min-height: 320px;
   }
 }
+
+.wishes__list {
+  max-width: 640px;
+  margin: 48px auto 0;
+}
+
+.wishes-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 20px;
+}
+
+.wishes-list__name {
+  margin: 0 0 4px;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+}
+
+.wishes-list__message {
+  margin: 0;
+  line-height: 1.5;
+  opacity: 0.9;
+}
