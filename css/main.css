@@ -142,3 +142,18 @@
   object-fit: cover;
   border-radius: 6px;
 }
+
+.video {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+}
+
+.video__embed {
+  width: min(90vw, 800px);
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 8px;
+}

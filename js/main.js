@@ -4,7 +4,7 @@ import { mountPhotoWall } from './photo-wall.js';
 import { mountLightbox } from './lightbox.js';
 import { renderWishesList } from './wishes-list.js';
 import { isMobileViewport } from './viewport.js';
-import { mobileAmbientVideoSrc } from './video-config.js';
+import { mobileAmbientVideoSrc, videoEmbedUrl } from './video-config.js';
 
 function init() {
   if (!isUnlocked(sessionStorage)) {
@@ -29,6 +29,7 @@ function init() {
     mountPhotoWall(visual, wishes, (wish) => lightbox.open(wish));
   }
   renderWishesList(document.getElementById('wishes-list-container'), wishes);
+  document.getElementById('video-embed').src = videoEmbedUrl;
 }
 
 document.addEventListener('DOMContentLoaded', init);
