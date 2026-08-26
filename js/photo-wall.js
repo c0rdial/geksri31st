@@ -33,3 +33,32 @@ export function assignFloatDelays(count, options = {}) {
   }
   return timings;
 }
+
+export function mountPhotoWall(container, wishes, onPhotoClick) {
+  const bounds = { width: container.clientWidth, height: container.clientHeight };
+  const itemSize = { width: 140, height: 140 };
+  const positions = generatePositions(wishes.length, bounds, itemSize);
+  const timings = assignFloatDelays(wishes.length);
+
+  wishes.forEach((wish, i) => {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'photo-wall__item';
+    wrapper.style.left = `${positions[i].x}px`;
+    wrapper.style.top = `${positions[i].y}px`;
+    wrapper.style.animationDuration = `${timings[i].duration}s`;
+    wrapper.style.animationDelay = `${timings[i].delay}s`;
+
+    const frame = document.createElement('button');
+    frame.type = 'button';
+    frame.className = 'photo-wall__frame';
+    frame.addEventListener('click', () => onPhotoClick(wish));
+
+    const img = document.createElement('img');
+    img.src = wish.image;
+    img.alt = `Photo from ${wish.name}`;
+    frame.appendChild(img);
+
+    wrapper.appendChild(frame);
+    container.appendChild(wrapper);
+  });
+}

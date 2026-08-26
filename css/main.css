@@ -1,1 +1,112 @@
-/* populated in Task 4 */
+.wishes {
+  position: relative;
+  min-height: 100vh;
+  padding: 64px 24px;
+  overflow: hidden;
+}
+
+.wishes__visual {
+  position: relative;
+  height: 70vh;
+  min-height: 420px;
+}
+
+.photo-wall__item {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  animation-name: float-drift;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.photo-wall__frame {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  overflow: hidden;
+  background: none;
+  filter: blur(14px);
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.photo-wall__frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.photo-wall__frame:hover,
+.photo-wall__frame:focus-visible {
+  filter: blur(0);
+  transform: scale(1.08);
+  z-index: 5;
+}
+
+@keyframes float-drift {
+  0%   { transform: translate(0, 0); }
+  50%  { transform: translate(12px, -16px); }
+  100% { transform: translate(0, 0); }
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 30, 40, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 20;
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox__panel {
+  position: relative;
+  background: #f6f1ea;
+  color: #2b2b2b;
+  border-radius: 10px;
+  padding: 24px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+}
+
+.lightbox__image {
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.lightbox__name {
+  font-weight: bold;
+  margin: 0 0 8px;
+}
+
+.lightbox__wish {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: inherit;
+}
+
+@media (max-width: 767px) {
+  .wishes__visual {
+    height: 50vh;
+    min-height: 320px;
+  }
+}
