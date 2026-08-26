@@ -49,7 +49,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node --test js/tests"
+    "test": "node --test js/tests/**/*.test.js"
   }
 }
 ```
@@ -101,7 +101,7 @@ test('unlock() sets the flag so isUnlocked() becomes true', () => {
 
 - [ ] **Step 2b: Run the test to verify it fails**
 
-Run: `node --test js/tests`
+Run: `node --test js/tests/**/*.test.js`
 Expected: FAIL — `js/gate.js` does not exist yet (`Cannot find module`).
 
 - [ ] **Step 3: Implement the pure gate functions**
@@ -126,7 +126,7 @@ export function isUnlocked(storage) {
 
 - [ ] **Step 4: Run the test to verify it passes**
 
-Run: `node --test js/tests`
+Run: `node --test js/tests/**/*.test.js`
 Expected: PASS — all 6 tests green.
 
 - [ ] **Step 5: Build the shared reset styles**
@@ -386,7 +386,7 @@ test('every referenced image file exists on disk', () => {
 
 - [ ] **Step 2: Run the test to verify it fails**
 
-Run: `node --test js/tests`
+Run: `node --test js/tests/**/*.test.js`
 Expected: FAIL — `js/content.js` does not exist yet.
 
 - [ ] **Step 3: Create placeholder images**
@@ -446,7 +446,7 @@ export const wishes = [
 
 - [ ] **Step 5: Run the test to verify it passes**
 
-Run: `node --test js/tests`
+Run: `node --test js/tests/**/*.test.js`
 Expected: PASS — all tests green (gate tests + content tests).
 
 - [ ] **Step 6: Commit**
@@ -522,7 +522,7 @@ test('assignFloatDelays returns one timing per photo within configured ranges', 
 
 - [ ] **Step 2: Run the tests to verify they fail**
 
-Run: `node --test js/tests`
+Run: `node --test js/tests/**/*.test.js`
 Expected: FAIL — `js/photo-wall.js` does not exist yet.
 
 - [ ] **Step 3: Implement the layout functions**
@@ -569,7 +569,7 @@ export function assignFloatDelays(count, options = {}) {
 
 - [ ] **Step 4: Run the tests to verify they pass**
 
-Run: `node --test js/tests`
+Run: `node --test js/tests/**/*.test.js`
 Expected: PASS — all tests green.
 
 - [ ] **Step 5: Commit**
@@ -839,7 +839,7 @@ document.addEventListener('DOMContentLoaded', init);
 
 - [ ] **Step 6: Run the unit tests (regression check)**
 
-Run: `node --test js/tests`
+Run: `node --test js/tests/**/*.test.js`
 Expected: PASS — no regressions from Tasks 1–3.
 
 - [ ] **Step 7: Verify manually in the browser**
@@ -1013,7 +1013,7 @@ test('a custom breakpoint can be supplied', () => {
 
 - [ ] **Step 2: Run the test to verify it fails**
 
-Run: `node --test js/tests`
+Run: `node --test js/tests/**/*.test.js`
 Expected: FAIL — `js/viewport.js` does not exist yet.
 
 - [ ] **Step 3: Implement `isMobileViewport`**
@@ -1028,7 +1028,7 @@ export function isMobileViewport(width, breakpoint = 768) {
 
 - [ ] **Step 4: Run the test to verify it passes**
 
-Run: `node --test js/tests`
+Run: `node --test js/tests/**/*.test.js`
 Expected: PASS — all tests green.
 
 - [ ] **Step 5: Add the video config placeholders**
@@ -1193,7 +1193,7 @@ git commit -m "Add video message section"
 
 - [ ] **Step 1: Run the full unit test suite**
 
-Run: `node --test js/tests`
+Run: `node --test js/tests/**/*.test.js`
 Expected: PASS — every test from Tasks 1, 2, 3, and 6 green, no regressions.
 
 - [ ] **Step 2: Full manual walkthrough**
@@ -1249,7 +1249,7 @@ Then open `http://localhost:8000/index.html`.
 npm test
 ```
 
-(or `node --test js/tests` directly — no dependencies to install.)
+(or `node --test js/tests/**/*.test.js` directly — no dependencies to install.)
 
 ## Launch checklist
 
