@@ -1,0 +1,53 @@
+.gate {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.gate__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.gate__label {
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+}
+
+.gate__input {
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+  color: inherit;
+  text-align: center;
+  min-width: 220px;
+}
+
+.gate__input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.gate__submit {
+  padding: 10px 28px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: transparent;
+  color: inherit;
+  letter-spacing: 0.06em;
+  transition: background 0.2s ease;
+}
+
+.gate__submit:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.gate__error {
+  color: #ffd6d6;
+  font-size: 0.9rem;
+}

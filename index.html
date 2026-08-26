@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>a little something</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/gate.css" />
+</head>
+<body>
+  <main class="gate">
+    <form id="gate-form" class="gate__form">
+      <label for="gate-password" class="gate__label">enter the password</label>
+      <input id="gate-password" class="gate__input" type="password" autocomplete="off" required />
+      <button type="submit" class="gate__submit">enter</button>
+      <p id="gate-error" class="gate__error" hidden>that's not it — try again</p>
+    </form>
+  </main>
+  <script type="module" src="js/gate-page.js"></script>
+</body>
+</html>
