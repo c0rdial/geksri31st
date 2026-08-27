@@ -23,6 +23,32 @@
   border-radius: 8px;
 }
 
+.cover__corner-text {
+  position: absolute;
+  top: 25px;
+  z-index: 1;
+  pointer-events: none;
+  margin: 0;
+  color: #fff;
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-label);
+  text-transform: lowercase;
+  text-shadow: 0 1px 8px rgba(20, 30, 40, 0.35);
+}
+
+.cover__corner-text--left {
+  left: 25px;
+}
+
+.cover__corner-text--center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cover__corner-text--right {
+  right: 25px;
+}
+
 .cover__overlay {
   position: absolute;
   inset: 24px;
