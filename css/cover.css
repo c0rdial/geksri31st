@@ -84,3 +84,10 @@
   opacity: 0.75;
   margin: 0;
 }
+
+/* Keep in sync with the breakpoint in js/viewport.js (isMobileViewport). */
+@media (max-width: 767px) {
+  .cover__footer {
+    display: none;
+  }
+}
