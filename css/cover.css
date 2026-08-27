@@ -1,6 +1,6 @@
 .cover {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   background: var(--color-sky);
   overflow: hidden;
 }
@@ -46,6 +46,12 @@
   height: auto;
   margin: 0 auto 28px;
   filter: drop-shadow(0 1px 16px rgba(20, 30, 40, 0.45));
+}
+
+@media (min-width: 768px) {
+  .cover__heading {
+    max-width: min(60vw, 480px);
+  }
 }
 
 .cover__link {
