@@ -1,3 +1,23 @@
+:root {
+  --color-sky: #789ebf;
+  --color-ink: #2a4157;
+  --color-paper: #f6f1ea;
+  --color-paper-dim: rgba(246, 241, 234, 0.16);
+  --color-error: #5c1f1f;
+
+  --font-body: Helvetica, Arial, sans-serif;
+
+  --text-xs: 0.8rem;
+  --text-sm: 0.9rem;
+  --text-base: 1rem;
+  --text-md: 1.15rem;
+  --text-lg: 1.4rem;
+  --text-xl: 2.25rem;
+
+  --tracking-label: 0.08em;
+  --tracking-name: 0.03em;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -8,9 +28,9 @@ html, body {
 }
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
-  background: #789ebf;
-  color: #fdfdfd;
+  font-family: var(--font-body);
+  background: var(--color-sky);
+  color: var(--color-ink);
   min-height: 100vh;
 }
 
@@ -22,4 +42,9 @@ img {
 button {
   font: inherit;
   cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-paper);
+  outline-offset: 3px;
 }
