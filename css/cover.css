@@ -50,22 +50,8 @@
 
 .cover__link {
   position: absolute;
-  left: 24px;
-  bottom: 24px;
-  z-index: 1;
-  color: #fff;
-  text-decoration: none;
-  font-size: var(--text-sm);
-  letter-spacing: var(--tracking-label);
-  text-transform: lowercase;
-  text-shadow: 0 1px 10px rgba(20, 30, 40, 0.4);
-  opacity: 0.9;
-}
-
-.cover__link:hover,
-.cover__link:focus-visible {
-  opacity: 1;
-  text-decoration: underline;
+  left: 14px;
+  bottom: 22px;
 }
 
 .cover__footer {
