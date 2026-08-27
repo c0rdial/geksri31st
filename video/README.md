@@ -1,9 +1,11 @@
 # Video assets
 
-Drop the mobile ambient background clip here as `ambient-mobile.mp4` before
-launch. It should be short (a few seconds, looping), muted-friendly, and
-web-optimized (H.264, reasonably small file size) since it autoplays on
-phones. It's purely decorative — no audio is played.
+`ambient-mobile.mp4` is the looping ambient clip shown full-bleed on the
+cover page (`index.html`), behind the handwritten "happy birthday" logo. It
+autoplays muted, so keep it short and web-optimized (H.264, reasonably
+small file size). It's shown letterboxed (not cropped) so the whole frame
+stays visible — pick a clip where nothing important is right at the edges.
 
 The birthday message video is *not* stored here — it's an unlisted
-YouTube/Vimeo URL set in `js/video-config.js`.
+YouTube/Vimeo URL set in `js/video-config.js`, embedded on the
+password-protected `from-me.html` page.

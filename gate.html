@@ -4,23 +4,24 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>happy 31st</title>
+  <title>a little something</title>
   <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
   <link rel="shortcut icon" href="favicon/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
   <link rel="manifest" href="favicon/site.webmanifest" />
   <link rel="stylesheet" href="css/reset.css" />
-  <link rel="stylesheet" href="css/cover.css" />
+  <link rel="stylesheet" href="css/gate.css" />
 </head>
 <body>
-  <main class="cover">
-    <video id="cover-video" class="cover__video" autoplay loop muted playsinline></video>
-    <div class="cover__overlay">
-      <img class="cover__heading" src="images/happy-birthday-handwriting.png" alt="happy birthday gek sri" />
-      <a class="cover__link" href="wishes.html">see your wishes</a>
-    </div>
+  <main class="gate">
+    <form id="gate-form" class="gate__form">
+      <label for="gate-password" class="gate__label">enter the password</label>
+      <input id="gate-password" class="gate__input" type="password" autocomplete="off" required />
+      <button type="submit" class="gate__submit">enter</button>
+      <p id="gate-error" class="gate__error" hidden>that's not it — try again</p>
+    </form>
   </main>
-  <script type="module" src="js/cover-page.js"></script>
+  <script type="module" src="js/gate-page.js"></script>
 </body>
 </html>

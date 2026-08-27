@@ -4,23 +4,22 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>happy 31st</title>
+  <title>from me</title>
   <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
   <link rel="shortcut icon" href="favicon/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
   <link rel="manifest" href="favicon/site.webmanifest" />
   <link rel="stylesheet" href="css/reset.css" />
-  <link rel="stylesheet" href="css/cover.css" />
+  <link rel="stylesheet" href="css/content.css" />
 </head>
 <body>
-  <main class="cover">
-    <video id="cover-video" class="cover__video" autoplay loop muted playsinline></video>
-    <div class="cover__overlay">
-      <img class="cover__heading" src="images/happy-birthday-handwriting.png" alt="happy birthday gek sri" />
-      <a class="cover__link" href="wishes.html">see your wishes</a>
-    </div>
-  </main>
-  <script type="module" src="js/cover-page.js"></script>
+  <section class="video" aria-label="A message for you">
+    <a class="page-back" href="wishes.html">← back</a>
+    <h1 class="page-heading">from me</h1>
+    <iframe id="video-embed" class="video__embed" title="Birthday message" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </section>
+
+  <script type="module" src="js/from-me-page.js"></script>
 </body>
 </html>

@@ -1,7 +1,16 @@
 # Gek Sri's 31st Birthday Site
 
-A password-protected birthday site: a floating/blurred photo wall with
-wishes from friends & family, and a video message.
+A birthday site with three pages:
+
+- `index.html` — the cover. A full-bleed ambient video with a handwritten
+  "happy birthday" logo overlay, linking through to the wishes page. Public,
+  no password.
+- `wishes.html` — a floating/blurred photo wall (hover/click a photo to
+  reveal that person's wish) plus a plain readable list of every wish.
+  Public, no password. Links through to the video message.
+- `from-me.html` — the birthday video message. Password-protected: visiting
+  it directly redirects to `gate.html` if you haven't entered the password
+  yet.
 
 ## Local development
 
@@ -24,6 +33,8 @@ npm test
 Before sending the link, do all of the following:
 
 1. **Set the real password** — edit `SITE_PASSWORD` in `js/gate-page.js`.
+   This only gates `from-me.html` — the cover and wishes pages are public
+   to anyone with the link.
 2. **Add real photos and wishes** — replace the placeholder entries in
    `js/content.js` with real `{ image, name, wish }` entries, and put the
    matching photo files in `images/`. Run `npm test` afterward — it
@@ -32,25 +43,25 @@ Before sending the link, do all of the following:
    best with roughly a dozen or so photos; if there are significantly
    more wishes than that, they'll still read fine in the plain wishes
    list below even if the floating wall gets a bit crowded.
-3. **Add the mobile ambient video** — drop a short, looping, web-optimized
-   clip at `video/ambient-mobile.mp4` (see `video/README.md`). Verify it
-   actually plays on a real phone or a resized mobile browser window —
-   this wasn't testable during development since no placeholder video was
-   available.
+3. **Swap the cover's ambient video** if you want a different clip than
+   the one currently at `video/ambient-mobile.mp4` (see `video/README.md`).
+   It's shown full-bleed (letterboxed, not cropped) on both the cover page
+   and behind the handwritten logo.
 4. **Add the birthday message video** — set `videoEmbedUrl` in
    `js/video-config.js` to your video's **embed** URL, not the
    address-bar URL — YouTube: `https://www.youtube.com/embed/VIDEO_ID`
    (Share → Embed → copy the `src` from the `<iframe>`); Vimeo:
    `https://player.vimeo.com/video/VIDEO_ID`. A regular
    `youtube.com/watch?v=...` or `youtu.be/...` link will NOT load in the
-   iframe. Unlisted videos embed fine; private ones do not. Verify it
+   iframe. Unlisted videos embed fine; private ones do not. It's currently
+   set to a placeholder — replace it with your real message. Verify it
    plays.
 5. **Deploy to Vercel** — from the repo root: `vercel --prod` (or import
    the `c0rdial/geksri31st` GitHub repo in the Vercel dashboard). No
    build command or output directory needed — it's a static site.
 6. **Do a full run-through on the deployed URL** before sending it to
-   her: gate → photo wall / wishes → video, on both desktop and a real
-   phone.
+   her: cover → wishes → password gate → video message, on both desktop
+   and a real phone.
 7. **Remove the placeholders** — delete the three placeholder
    `images/placeholder*.svg` files and their entries in `js/content.js`
    once real content is in.

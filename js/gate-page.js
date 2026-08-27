@@ -11,7 +11,7 @@ function init() {
     event.preventDefault();
     if (checkPassword(input.value, SITE_PASSWORD)) {
       unlock(sessionStorage);
-      window.location.href = 'main.html';
+      window.location.href = 'from-me.html';
     } else {
       error.hidden = false;
       input.value = '';

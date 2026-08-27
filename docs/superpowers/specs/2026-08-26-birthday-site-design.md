@@ -2,25 +2,30 @@
 
 ## Overview
 
-A private, password-protected website for Gek Sri's 31st birthday, built by
-her partner. Vibe/reference: [komo23x/hear-her](https://github.com/komo23x/hear-her)
-— soft, drifting photos that unblur on hover, revealing a personal message.
-Confirmed by loading the live reference site: on desktop it's a static
-blurred photo grid; on mobile (no hover available) it swaps to a
-"tap to enter" gesture into a full-screen looping ambient background video.
+A birthday website for Gek Sri's 31st birthday, built by her partner.
+Vibe/reference: [komo23x/hear-her](https://github.com/komo23x/hear-her) —
+soft, drifting photos that unblur on hover, revealing a personal message;
+Helvetica/Arial sans-serif throughout; a handwritten script logo image as
+the site's identity rather than styled text.
 
-Two core features, delivered as a single scrolling page after the
-password gate:
-1. **Wishes section** — a floating photo wall of her, blurred, drifting;
-   hovering (desktop) unblurs a photo and clicking it reveals the wish
+Three pages, in a linear flow:
+1. **Cover** (`index.html`) — a full-bleed, looping ambient video with a
+   handwritten "happy birthday" logo overlaid on top, and a link through
+   to the wishes page. Public — no password.
+2. **Wishes** (`wishes.html`) — a floating photo wall of her, blurred,
+   drifting; hovering/clicking a photo unblurs it and reveals the wish
    written by the friend/family member paired with that photo, in a
-   lightbox. Alongside/below it, a plain readable list of every wish (name
-   + message) so nothing requires hunting down the right photo.
-2. **Video section** — further down the same page, an embedded unlisted
+   lightbox. Alongside it, a plain readable list of every wish (name +
+   message) so nothing requires hunting down the right photo. Public — no
+   password. Links through to the video message.
+3. **Video message** (`from-me.html`) — an embedded unlisted
    YouTube/Vimeo video of her partner's recorded birthday message.
+   **Password-protected** — this is the only gated page.
 
-The whole site sits behind a simple shared-password gate so the link isn't
-usable by a random visitor before she's meant to see it.
+Only the video message sits behind a password; the cover and wishes pages
+are shareable without one, closer to a public "guestbook" anyone with the
+link can browse, with the personal video reserved as the protected,
+private surprise.
 
 ## Non-goals
 
@@ -32,56 +37,56 @@ usable by a random visitor before she's meant to see it.
   the data file before launch).
 - No analytics/tracking.
 - Not defending against a technically determined adversary reading page
-  source — the password gate exists to stop a random link click, not to
-  protect sensitive data.
-- No per-photo tap interaction on mobile — the photo wall is replaced
-  entirely by the ambient background video there (see Mobile treatment).
-  Mobile visitors read wishes via the readable wishes list instead.
+  source — the password gate exists to stop a random link click into the
+  video message, not to protect sensitive data.
+- No per-photo tap interaction beyond click/tap-to-open — the photo wall's
+  hover-unblur is a nice-to-have preview on devices with a pointer; on
+  touch, tapping still opens the lightbox directly.
 
 ## Pages
 
-### `index.html` — Password gate
-- Single password input + submit.
-- On correct password, sets a `sessionStorage` flag and redirects to
-  `main.html`.
-- `main.html` checks this flag on load and redirects back to `index.html`
-  if it's not set, so the page can't be reached by a direct link without
-  the password.
+### `index.html` — Cover (public)
+- A full-bleed `<video>` (the ambient clip), `object-fit: contain` with a
+  matching background so the whole frame stays visible rather than
+  cropped, looping/muted/autoplaying.
+- A handwritten "happy birthday gek sri" logo image overlaid on top,
+  center.
+- A link ("see your wishes") to `wishes.html`.
+- No password check — this page is the public entry point.
 
-### `main.html` — Wishes + Video (single scrolling page)
-
-**Wishes section (top):**
-- Desktop: renders one floating element per entry in the content data
-  file.
+### `wishes.html` — Wishes (public)
+- Page heading introducing the page.
+- Floating photo wall: one element per entry in the content data file.
   - Drifts slowly via CSS `@keyframes` (randomized duration/delay per
     photo, so movement doesn't look synchronized).
-  - Sits blurred (`filter: blur(...)`) by default; hover removes the blur
-    and brings it visually forward (z-index + slight scale).
-  - Click opens a lightbox overlay showing the full photo, the wish text,
-    and the author's name.
+  - Sits blurred (`filter: blur(...)`) by default; hover/focus removes
+    the blur and brings it visually forward.
+  - Click/tap opens a lightbox overlay showing the full photo, the wish
+    text, and the author's name — works identically with mouse or touch.
   - Initial photo positions are randomized on load with basic overlap
     avoidance (simple retry-on-collision placement, not a full physics
     layout).
-- Below (or alongside) the photo wall: a plain readable list/wall of all
-  wishes as text (name + message), independent of the floating photos —
-  present on both desktop and mobile.
+- Below the photo wall: a plain readable list of all wishes as text (name
+  + message), independent of the floating photos.
+- A link ("and one more thing...") to `from-me.html`.
+- No password check — this page is public.
 
-**Mobile treatment (of the Wishes section only):**
-- The floating photo wall is replaced by a looping, muted, full-width
-  ambient background video (short mood/atmosphere clip, decorative only
-  — separate asset from the birthday message video). No per-photo tap
-  interaction on mobile.
-- The readable wishes list still renders normally below it (plain text,
-  no hover needed).
+### `gate.html` — Password gate
+- Single password input + submit.
+- On correct password, sets a `sessionStorage` flag and redirects to
+  `from-me.html`.
 
-**Video section (below Wishes):**
+### `from-me.html` — Video message (password-protected)
+- On load, checks the `sessionStorage` unlock flag; if not set, redirects
+  to `gate.html`.
 - Embedded unlisted YouTube/Vimeo video — the partner's recorded birthday
-  message. Same on desktop and mobile.
+  message.
+- A "← back" link to `wishes.html`.
 
 ## Content model
 
-A single `content.js` (or `content.json`) file holding an array of entries
-for the photo wall / wishes:
+A single `content.js` file holding an array of entries for the photo
+wall / wishes:
 
 ```js
 const wishes = [
@@ -93,17 +98,18 @@ const wishes = [
 
 Images live in an `/images` folder. Before launch, the site owner adds
 image files and matching entries to this array — no build step or admin
-UI required. Two additional standalone assets are needed: the mobile
-ambient background video, and the unlisted YouTube/Vimeo URL for the
-birthday message.
+UI required. Two additional standalone assets are needed: the cover's
+ambient video, and the unlisted YouTube/Vimeo URL for the birthday
+message.
 
 ## Password gate implementation
 
 - A single password value lives in the client-side JS (visible to anyone
   who reads page source — see Non-goals).
 - `sessionStorage` (not `localStorage`) is used to persist the unlocked
-  state for the current browser session, so she isn't re-prompted on every
-  navigation within one visit but the gate re-applies in a fresh session.
+  state for the current browser session.
+- Only `from-me.html` checks this flag — the cover and wishes pages are
+  always reachable directly.
 
 ## Tech stack & hosting
 
@@ -118,15 +124,15 @@ birthday message.
 ## Testing plan
 
 Since this is a static, visual, interaction-driven site with no backend
-logic to unit test, verification is manual, in-browser:
-- Password gate: wrong password stays blocked; correct password unlocks
-  and persists across navigation within the session; direct navigation to
-  `main.html` without the password redirects to the gate.
-- Wishes section (desktop): photos render, drift, unblur on hover, and
-  open the correct wish on click, across a range of entry counts (test
-  with a handful of placeholder photos before real content is added).
-- Wishes section (mobile viewport): ambient background video plays
-  (looping, muted); readable wishes list renders correctly below it.
-- Readable wishes list: all entries display correctly on both desktop and
-  mobile.
-- Video section: embed loads and plays, on both desktop and mobile.
+logic to unit test, verification is manual, in-browser, plus Node-based
+unit tests for the pure-logic pieces (password check, photo layout math):
+- Cover: ambient video plays full-bleed, letterboxed rather than cropped;
+  logo and link render on top; link navigates to `wishes.html`.
+- Wishes: photos render, drift, unblur on hover, and open the correct
+  wish on click/tap, across a range of entry counts; readable list
+  renders all entries; link navigates to `from-me.html`.
+- Password gate: direct navigation to `from-me.html` without the password
+  redirects to `gate.html`; wrong password stays blocked; correct
+  password unlocks, redirects to `from-me.html`, and persists across
+  navigation within the session.
+- Video message: embed loads and plays; back link returns to `wishes.html`.

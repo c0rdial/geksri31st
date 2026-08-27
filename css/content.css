@@ -1,25 +1,53 @@
-.wishes {
-  position: relative;
-  padding: 64px 24px;
-  overflow: hidden;
-}
-
-.wishes__heading {
+.page-heading {
   text-align: center;
   font-size: var(--text-xl);
   font-weight: normal;
   letter-spacing: var(--tracking-name);
   text-transform: lowercase;
-  margin: 0 0 8px;
+  margin: 0 0 40px;
 }
 
-.wishes__kicker {
+.page-back {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  color: inherit;
+  text-decoration: none;
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-label);
+  text-transform: lowercase;
+  opacity: 0.8;
+}
+
+.page-back:hover,
+.page-back:focus-visible {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.page-next {
+  display: block;
   text-align: center;
+  padding: 24px;
+  color: inherit;
+  text-decoration: none;
   font-size: var(--text-sm);
   letter-spacing: var(--tracking-label);
   text-transform: lowercase;
   opacity: 0.75;
-  margin: 0 0 40px;
+  transition: opacity 0.2s ease;
+}
+
+.page-next:hover,
+.page-next:focus-visible {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.wishes {
+  position: relative;
+  padding: 64px 24px;
+  overflow: hidden;
 }
 
 .wishes__visual {
@@ -137,7 +165,6 @@
   outline-color: var(--color-ink);
 }
 
-/* Keep in sync with the breakpoint in js/viewport.js (isMobileViewport). */
 @media (max-width: 767px) {
   .wishes__visual {
     height: 50vh;
@@ -171,28 +198,14 @@
   opacity: 0.9;
 }
 
-.ambient-video {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  background: var(--color-sky);
-  border-radius: 6px;
-}
-
 .video {
+  position: relative;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 48px 24px;
-}
-
-.video__kicker {
-  font-size: var(--text-sm);
-  letter-spacing: var(--tracking-label);
-  text-transform: lowercase;
-  opacity: 0.75;
-  margin: 0 0 24px;
 }
 
 .video__embed {
