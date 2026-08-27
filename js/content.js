@@ -1,18 +1,58 @@
-// Replace these three placeholder entries with real photos and wishes before launch.
+// Replace these placeholder entries with real photos and wishes before launch.
 export const wishes = [
   {
     image: 'images/placeholder1.svg',
-    name: 'Mom',
-    wish: 'Happy 31st birthday! I am so proud of the person you have become. Love you endlessly.',
+    name: 'mama',
+    wish: 'Happy 31st birthday! We are so proud of the person you have become. Love you endlessly.',
   },
   {
     image: 'images/placeholder2.svg',
-    name: 'Alex',
-    wish: 'Cheers to another trip around the sun! Can not wait to celebrate with you.',
+    name: 'papa',
+    wish: 'Happy birthday, sweetheart. Wishing you all the joy in the world this year.',
   },
   {
     image: 'images/placeholder3.svg',
-    name: 'Priya',
-    wish: 'You bring so much light to everyone around you. Happy birthday, friend!',
+    name: 'gek surya',
+    wish: 'Happy birthday! Cheers to another trip around the sun with you.',
+  },
+  {
+    image: 'images/placeholder4.svg',
+    name: 'gek anggi',
+    wish: 'Happy birthday! Can not wait to celebrate with you soon.',
+  },
+  {
+    image: 'images/placeholder5.svg',
+    name: 'dik gus',
+    wish: 'Happy birthday, kak! Wishing you the best year yet.',
+  },
+  {
+    image: 'images/placeholder6.svg',
+    name: 'tree',
+    wish: 'Happy birthday! You bring so much light to everyone around you.',
+  },
+  {
+    image: 'images/placeholder7.svg',
+    name: 'wulan',
+    wish: 'Happy birthday! So grateful to have you in my life.',
+  },
+  {
+    image: 'images/placeholder8.svg',
+    name: 'jennifer',
+    wish: 'Happy birthday! Here is to another amazing year ahead.',
+  },
+  {
+    image: 'images/placeholder9.svg',
+    name: 'cempaka',
+    wish: 'Happy birthday! You deserve all the happiness today and always.',
+  },
+  {
+    image: 'images/placeholder10.svg',
+    name: 'amika',
+    wish: 'Happy birthday! Sending you so much love on your special day.',
+  },
+  {
+    image: 'images/placeholder11.svg',
+    name: 'raf',
+    wish: 'Happy birthday! Excited to celebrate with you.',
   },
 ];
