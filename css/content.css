@@ -29,9 +29,9 @@
 }
 
 .page-next {
-  display: block;
-  text-align: center;
-  padding: 24px;
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
   color: #fff;
   text-decoration: none;
   font-size: var(--text-sm);
