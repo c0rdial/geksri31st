@@ -7,8 +7,9 @@ export function renderWishesList(container, wishes) {
     const item = document.createElement('li');
     item.className = 'wishes-list__item';
 
-    const name = document.createElement('p');
+    const name = document.createElement('a');
     name.className = 'wishes-list__name';
+    name.href = `person.html?name=${encodeURIComponent(wish.name)}`;
     name.textContent = wish.name;
 
     const message = document.createElement('p');
