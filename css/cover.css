@@ -74,6 +74,7 @@
   right: 0;
   bottom: 24px;
   z-index: 1;
+  pointer-events: none;
   text-align: center;
   color: #fff;
   font-size: var(--text-xs);
