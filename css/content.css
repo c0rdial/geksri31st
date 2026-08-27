@@ -111,64 +111,6 @@
   }
 }
 
-.lightbox {
-  position: fixed;
-  inset: 0;
-  background: rgba(20, 30, 40, 0.75);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  z-index: 20;
-}
-
-.lightbox[hidden] {
-  display: none;
-}
-
-.lightbox__panel {
-  position: relative;
-  background: #f6f1ea;
-  color: #2b2b2b;
-  border-radius: 10px;
-  padding: 24px;
-  max-width: 420px;
-  width: 100%;
-  text-align: center;
-}
-
-.lightbox__image {
-  border-radius: 6px;
-  margin-bottom: 16px;
-}
-
-.lightbox__name {
-  font-weight: bold;
-  margin: 0 0 8px;
-  text-transform: lowercase;
-  letter-spacing: var(--tracking-name);
-}
-
-.lightbox__wish {
-  margin: 0;
-  line-height: 1.8;
-}
-
-.lightbox__close {
-  position: absolute;
-  top: 8px;
-  right: 12px;
-  background: none;
-  border: none;
-  font-size: var(--text-lg);
-  line-height: 1;
-  color: inherit;
-}
-
-.lightbox__close:focus-visible {
-  outline-color: var(--color-ink);
-}
-
 /* Keep in sync with the breakpoint in js/viewport.js (isMobileViewport). */
 @media (max-width: 767px) {
   .wishes__visual {

@@ -1,13 +1,18 @@
 # Gek Sri's 31st Birthday Site
 
-A birthday site with three pages:
+A birthday site with four pages:
 
-- `index.html` — the cover. A full-bleed ambient video with a handwritten
-  "happy birthday" logo overlay, linking through to the wishes page. Public,
-  no password.
-- `wishes.html` — a floating/blurred photo wall (hover/click a photo to
-  reveal that person's wish) plus a plain readable list of every wish.
-  Public, no password. Links through to the video message.
+- `index.html` — the cover. Desktop shows the floating photo wall as a
+  backdrop; mobile shows a single placeholder image/video instead. A
+  handwritten "happy birthday" logo overlay sits on top, with a corner
+  link through to the wishes page. Public, no password.
+- `wishes.html` — a floating/blurred photo wall (hover to preview, click
+  a photo to go to that person's page) plus a plain readable list of
+  every wish. Public, no password. Corner link through to the video
+  message.
+- `person.html?name=<name>` — a dedicated page per wish (photo, name,
+  message), reached by clicking a photo on the wishes page. An
+  unrecognized name redirects back to `wishes.html`.
 - `from-me.html` — the birthday video message. Password-protected: visiting
   it directly redirects to `gate.html` if you haven't entered the password
   yet.
@@ -37,8 +42,10 @@ Before sending the link, do all of the following:
    to anyone with the link.
 2. **Add real photos and wishes** — replace the placeholder entries in
    `js/content.js` with real `{ image, name, wish }` entries, and put the
-   matching photo files in `images/`. Run `npm test` afterward — it
-   checks every entry has an image, name, and wish, and that each
+   matching photo files in `images/`. Keep names unique — `person.html`
+   looks up which wish to show by matching the `name` in its URL, so two
+   entries with the same name would collide. Run `npm test` afterward —
+   it checks every entry has an image, name, and wish, and that each
    referenced image file actually exists. The floating photo wall looks
    best with roughly a dozen or so photos; if there are significantly
    more wishes than that, they'll still read fine in the plain wishes

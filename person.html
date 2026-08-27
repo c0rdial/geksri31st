@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>your wishes</title>
+  <title>a wish for you</title>
   <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
   <link rel="shortcut icon" href="favicon/favicon.ico" />
@@ -12,16 +12,15 @@
   <link rel="manifest" href="favicon/site.webmanifest" />
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/content.css" />
+  <link rel="stylesheet" href="css/person.css" />
 </head>
 <body>
-  <section class="wishes" aria-label="Wishes">
-    <h1 class="page-heading">wishes from the people who love you</h1>
-    <div id="wishes-visual" class="wishes__visual"></div>
-    <div id="wishes-list-container" class="wishes__list"></div>
-  </section>
-
-  <a class="page-next" href="from-me.html">and one more thing...</a>
-
-  <script type="module" src="js/wishes-page.js"></script>
+  <a class="page-back" href="wishes.html">← back</a>
+  <main class="person">
+    <img id="person-image" class="person__image" alt="" />
+    <h1 id="person-name" class="page-heading"></h1>
+    <p id="person-wish" class="person__wish"></p>
+  </main>
+  <script type="module" src="js/person-page.js"></script>
 </body>
 </html>
