@@ -4,6 +4,8 @@
   font-weight: normal;
   letter-spacing: var(--tracking-name);
   text-transform: lowercase;
+  color: #fff;
+  text-shadow: 0 1px 12px rgba(20, 30, 40, 0.4);
   margin: 0 0 40px;
 }
 
@@ -11,12 +13,13 @@
   position: fixed;
   top: 24px;
   left: 24px;
-  color: inherit;
+  color: #fff;
   text-decoration: none;
   font-size: var(--text-sm);
   letter-spacing: var(--tracking-label);
   text-transform: lowercase;
-  opacity: 0.8;
+  text-shadow: 0 1px 8px rgba(20, 30, 40, 0.35);
+  opacity: 0.85;
 }
 
 .page-back:hover,
@@ -29,12 +32,13 @@
   display: block;
   text-align: center;
   padding: 24px;
-  color: inherit;
+  color: #fff;
   text-decoration: none;
   font-size: var(--text-sm);
   letter-spacing: var(--tracking-label);
   text-transform: lowercase;
-  opacity: 0.75;
+  text-shadow: 0 1px 8px rgba(20, 30, 40, 0.35);
+  opacity: 0.85;
   transition: opacity 0.2s ease;
 }
 
@@ -165,6 +169,7 @@
   outline-color: var(--color-ink);
 }
 
+/* Keep in sync with the breakpoint in js/viewport.js (isMobileViewport). */
 @media (max-width: 767px) {
   .wishes__visual {
     height: 50vh;
@@ -190,11 +195,15 @@
   font-weight: bold;
   letter-spacing: var(--tracking-name);
   text-transform: lowercase;
+  color: #fff;
+  text-shadow: 0 1px 8px rgba(20, 30, 40, 0.35);
 }
 
 .wishes-list__message {
   margin: 0;
   line-height: 1.8;
+  color: #fff;
+  text-shadow: 0 1px 8px rgba(20, 30, 40, 0.35);
   opacity: 0.9;
 }
 
