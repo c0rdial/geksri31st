@@ -15,8 +15,8 @@ function init() {
     media.alt = '';
     visual.appendChild(media);
   } else {
-    mountPhotoWall(visual, wishes, () => {
-      window.location.href = 'wishes.html';
+    mountPhotoWall(visual, wishes, (wish) => {
+      window.location.href = `person.html?name=${encodeURIComponent(wish.name)}`;
     });
   }
 }

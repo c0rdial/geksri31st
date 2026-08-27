@@ -60,9 +60,9 @@ protected, private surprise.
 ## Pages
 
 ### `index.html` — Cover (public)
-- Desktop: the floating photo wall (same mechanics as the wishes page)
-  as a decorative backdrop; clicking any photo navigates to
-  `wishes.html` (not to a person page — the cover isn't wish-specific).
+- Desktop: the floating photo wall (same mechanics as the wishes page);
+  clicking a photo navigates directly to that person's page
+  (`person.html?name=...`), same as on the wishes page.
 - Mobile (viewport width < 768px): a single ambient image/video instead
   of the photo wall (no hover on touch, so the scattered-photo
   interaction doesn't apply).
