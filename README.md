@@ -3,9 +3,9 @@
 A birthday site with four pages:
 
 - `index.html` — the cover. Desktop shows the floating photo wall as a
-  backdrop; mobile shows a single placeholder image/video instead. A
-  handwritten "happy birthday" logo overlay sits on top, with a corner
-  link through to the wishes page. Public, no password.
+  backdrop; mobile shows a looping ambient video instead. A handwritten
+  "happy birthday" logo overlay sits on top, with a corner link through
+  to the wishes page. Public, no password.
 - `wishes.html` — a floating/blurred photo wall (hover to preview, click
   a photo to go to that person's page) plus a plain readable list of
   every wish. Public, no password. Corner link through to the video

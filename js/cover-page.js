@@ -1,18 +1,19 @@
 import { wishes } from './content.js';
 import { mountPhotoWall } from './photo-wall.js';
 import { isMobileViewport } from './viewport.js';
+import { mobileAmbientVideoSrc } from './video-config.js';
 
 function init() {
   const visual = document.getElementById('cover-visual');
 
   if (isMobileViewport(window.innerWidth)) {
-    // Placeholder while the real ambient animation is in progress — swap
-    // this <img> for a <video autoplay loop muted playsinline> sourced
-    // from mobileAmbientVideoSrc (see js/video-config.js) once it's ready.
-    const media = document.createElement('img');
+    const media = document.createElement('video');
     media.className = 'cover__media';
-    media.src = 'images/placeholder-for-mobile.png';
-    media.alt = '';
+    media.src = mobileAmbientVideoSrc;
+    media.autoplay = true;
+    media.loop = true;
+    media.muted = true;
+    media.playsInline = true;
     visual.appendChild(media);
   } else {
     mountPhotoWall(visual, wishes, (wish) => {
