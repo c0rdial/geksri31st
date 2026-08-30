@@ -13,9 +13,11 @@ export const wishes = [
     wish: 'Happy birthday, sweetheart. Wishing you all the joy in the world this year.',
   },
   {
-    image: 'images/placeholder3.svg',
+    // TODO: replace with gek surya's real wish once it comes in.
+    image: 'images/gek-surya.jpg',
     name: 'gek surya',
     wish: 'Happy birthday! Cheers to another trip around the sun with you.',
+    images: ['images/gek-surya-2.jpg', 'images/gek-surya-3.jpg', 'images/gek-surya-4.jpg', 'images/gek-surya-5.jpg'],
   },
   {
     image: 'images/gek-anggi.jpg',
