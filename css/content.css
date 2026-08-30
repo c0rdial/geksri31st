@@ -205,24 +205,6 @@
   opacity: 0.9;
 }
 
-.loves {
-  padding: 64px 24px;
-  text-align: center;
-}
-
-.loves-list {
-  list-style: none;
-  max-width: 560px;
-  margin: 0 auto;
-  padding: 0;
-  display: grid;
-  gap: 20px;
-  color: #fff;
-  text-shadow: 0 1px 8px rgba(20, 30, 40, 0.35);
-  font-size: var(--text-md);
-  line-height: 1.8;
-}
-
 .video {
   position: relative;
   min-height: 100vh;

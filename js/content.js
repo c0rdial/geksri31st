@@ -18,9 +18,10 @@ export const wishes = [
     wish: 'Happy birthday! Cheers to another trip around the sun with you.',
   },
   {
-    image: 'images/placeholder4.svg',
+    image: 'images/gek-anggi.jpg',
     name: 'gek anggi',
-    wish: 'Happy birthday! Can not wait to celebrate with you soon.',
+    wish: 'Happy birthday Mogek Sri! You are so inspirational, smart, witty, glam, creative and unbelievably cool, the best mogek anyone could ever look up to!',
+    images: ['images/gek-anggi-2.jpg'],
   },
   {
     image: 'images/placeholder5.svg',

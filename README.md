@@ -11,11 +11,9 @@ A birthday site with four pages:
   every wish. Public, no password. Corner link through to the video
   message.
 - `person.html?name=<name>` — a dedicated page per wish (photo, name,
-  message), reached by clicking a photo on the wishes page, plus a
-  shared "things i love about you" section (same on every person page —
-  edit it directly in `person.html`). An unrecognized name redirects
-  back to `wishes.html`. A wish's optional `images` array renders as a
-  small photo gallery below the wish text.
+  message), reached by clicking a photo on the wishes page. An
+  unrecognized name redirects back to `wishes.html`. A wish's optional
+  `images` array renders as a small photo gallery below the wish text.
 - `from-me.html` — the birthday video message. Password-protected: visiting
   it directly redirects to `gate.html` if you haven't entered the password
   yet.
@@ -74,8 +72,7 @@ Before sending the link, do all of the following:
    and a real phone.
 7. **Remove the placeholders** — delete the placeholder
    `images/placeholder*.svg` files and their entries in `js/content.js`
-   once real content is in, and replace the three "things i love about
-   you" placeholder points in `person.html` with real ones.
+   once real content is in.
 8. **Pick a password you don't reuse elsewhere** — it's stored in plain,
    readable source (`js/gate-page.js`), which is an accepted tradeoff for
    this project but worth knowing before picking one.
