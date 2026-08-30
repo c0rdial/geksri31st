@@ -14,7 +14,8 @@ A birthday site with four pages:
   message), reached by clicking a photo on the wishes page, plus a
   shared "things i love about you" section (same on every person page —
   edit it directly in `person.html`). An unrecognized name redirects
-  back to `wishes.html`.
+  back to `wishes.html`. A wish's optional `images` array renders as a
+  small photo gallery below the wish text.
 - `from-me.html` — the birthday video message. Password-protected: visiting
   it directly redirects to `gate.html` if you haven't entered the password
   yet.

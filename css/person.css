@@ -22,5 +22,27 @@
   text-shadow: 0 1px 8px rgba(20, 30, 40, 0.35);
   font-size: var(--text-md);
   line-height: 1.8;
+  white-space: pre-line;
   margin: 0;
+}
+
+.person__gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 12px;
+  max-width: 480px;
+  width: 100%;
+  margin-top: 32px;
+}
+
+.person__gallery:empty {
+  display: none;
+}
+
+.person__gallery-image {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(20, 30, 40, 0.3);
 }

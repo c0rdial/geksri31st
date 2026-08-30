@@ -201,6 +201,7 @@
   line-height: 1.8;
   color: #fff;
   text-shadow: 0 1px 8px rgba(20, 30, 40, 0.35);
+  white-space: pre-line;
   opacity: 0.9;
 }
 

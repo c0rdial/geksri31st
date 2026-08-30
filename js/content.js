@@ -1,4 +1,6 @@
 // Replace these placeholder entries with real photos and wishes before launch.
+// `images` is optional — an array of extra photo paths shown as a small
+// gallery on that person's page, below the main `image` and wish.
 export const wishes = [
   {
     image: 'images/placeholder1.svg',
@@ -41,9 +43,10 @@ export const wishes = [
     wish: 'Happy birthday! Here is to another amazing year ahead.',
   },
   {
-    image: 'images/placeholder9.svg',
+    image: 'images/cempaka.jpg',
     name: 'cempaka',
-    wish: 'Happy birthday! You deserve all the happiness today and always.',
+    wish: 'Happy birthday to my (studio) partner in crime!! the one and only gek\n\nSo proud of the woman you’ve become and so glad I get to create, build, dream, and grow with you. Wouldn’t trade this partnership for anyone!!\n\nI hope this year brings you so much happiness, success, and everything you deserve. Remember that you are destined for big things!!! Love youuu',
+    images: ['images/cempaka-2.jpg', 'images/cempaka-3.jpg', 'images/cempaka-4.jpg', 'images/cempaka-5.jpg'],
   },
   {
     image: 'images/placeholder10.svg',
@@ -54,5 +57,10 @@ export const wishes = [
     image: 'images/placeholder11.svg',
     name: 'raf',
     wish: 'Happy birthday! Excited to celebrate with you.',
+  },
+  {
+    image: 'images/zu.jpg',
+    name: 'zu',
+    wish: 'Happiest birthday gek, im so happy i got to know you. youre such an amazing person, wishing you all the happiness in the world 💙',
   },
 ];

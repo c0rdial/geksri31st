@@ -53,9 +53,11 @@ protected, private surprise.
 - No per-photo interaction beyond click/tap-to-navigate — the photo
   wall's hover-unblur is a nice-to-have preview on devices with a
   pointer; on touch, tapping still navigates to the person page directly.
-- Person pages show a single, clear photo (not blurred, not a scattered
-  multi-photo backdrop) — unlike the reference's per-artist pages, each
-  wish has exactly one photo, not a portfolio to scatter.
+- Person pages lead with a single, clear main photo (not blurred, not a
+  scattered backdrop) — unlike the reference's per-artist pages. A wish
+  may optionally include a few extra photos, shown as a plain grid below
+  the wish text, but this is never the scattered/blurred treatment the
+  photo wall uses.
 
 ## Pages
 
@@ -98,6 +100,9 @@ protected, private surprise.
 - Shows: a "← back" link to `wishes.html`, the person's photo (shown
   clearly, not blurred — this is the reveal), their name as a heading,
   and their wish text.
+- If that wish's optional `images` array is non-empty, a small gallery
+  grid of the extra photos renders below the wish text; entries without
+  extra photos simply have no gallery section.
 
 ### `gate.html` — Password gate
 - Single password input + submit.
@@ -119,10 +124,13 @@ wall / wishes / person pages:
 ```js
 const wishes = [
   { image: "images/photo1.jpg", name: "Mom", wish: "Happy birthday..." },
-  { image: "images/photo2.jpg", name: "Alex", wish: "..." },
+  { image: "images/photo2.jpg", name: "Alex", wish: "...", images: ["images/photo2-extra1.jpg"] },
   // ...
 ];
 ```
+
+`images` is optional — an array of extra photo paths rendered as a small
+gallery grid on that person's page, below the main photo and wish.
 
 Images live in an `/images` folder. `name` doubles as the identifier
 `person.html` looks up by (via `?name=`) — entries should have distinct

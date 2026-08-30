@@ -26,3 +26,12 @@ test('every referenced image file exists on disk', () => {
     assert.ok(existsSync(imagePath), `image file not found: ${entry.image}`);
   }
 });
+
+test('every referenced gallery image file exists on disk', () => {
+  for (const entry of wishes) {
+    for (const image of entry.images ?? []) {
+      const imagePath = path.join(projectRoot, image);
+      assert.ok(existsSync(imagePath), `gallery image file not found: ${image}`);
+    }
+  }
+});
