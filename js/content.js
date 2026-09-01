@@ -30,7 +30,7 @@ export const wishes = [
     wish: 'Happy Birthday Mogek Sri! Keep being creative, smart and awesome.',
   },
   {
-    image: 'images/placeholder6.svg',
+    image: 'images/tree.jpg',
     name: 'tree',
     wish: 'Happy birthday! You bring so much light to everyone around you.',
   },
