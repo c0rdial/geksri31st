@@ -52,9 +52,10 @@ export const wishes = [
     images: ['images/cempaka-2.jpg', 'images/cempaka-3.jpg', 'images/cempaka-4.jpg', 'images/cempaka-5.jpg'],
   },
   {
-    image: 'images/placeholder10.svg',
+    image: 'images/amika.jpg',
     name: 'amika',
-    wish: 'Happy birthday! Sending you so much love on your special day.',
+    wish: 'Happy birthday to my favorite person, my twinzy 🤍 I’m so glad our paths crossed and even more grateful that somehow we get to share the same birthday too 🥹\n\nThrough every season and every crazy phase of my life, you’ve always been there—never judging, always supporting me, bringing out the best in me, and reminding me of who I am. I genuinely wouldn’t be where I am today without you🤍🤍 (honestly!!) thank you for everything✨\n\nYour creativity, your epicness, and just the way your brain works 😂 are truly one of a kind. Life will always be full of surprises with you around lol! I’m beyond grateful to have you in my life, and I’m pretty sure all of our friends feel the same way!🥰\n\nI LLOOOVEEEE you so much, and I hope this year brings you so much joy, growth, love, and everything you’ve been praying for. Never doubt yourself or how special you are. You are amazing, and you deserve the world my love🤍\n\nHere’s to another year of adventures, giggles, more memories, less chaos hehe , and many more birthdays together 🥂✨\n\nLove you forever, twinzy. Happy birthday my love <<3 xx\n\n-BIG LOVE, your twin miks',
+    images: ['images/amika-2.jpg', 'images/amika-3.jpg'],
   },
   {
     image: 'images/placeholder11.svg',
