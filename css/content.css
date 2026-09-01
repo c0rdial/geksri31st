@@ -227,27 +227,13 @@
   text-align: center;
 }
 
-.passport__grid {
+.passport__block {
   max-width: 960px;
+  height: 320px;
   margin: 40px auto 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 48px;
-}
-
-.passport__photo {
-  width: 100%;
-  height: auto;
+  background: var(--color-sky);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 4px;
-  box-shadow: 0 12px 32px rgba(20, 30, 40, 0.35);
-}
-
-.passport__photo:nth-child(odd) {
-  transform: rotate(-2deg);
-}
-
-.passport__photo:nth-child(even) {
-  transform: rotate(2deg);
 }
 
 .wish {

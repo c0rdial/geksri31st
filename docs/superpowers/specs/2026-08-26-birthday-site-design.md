@@ -30,10 +30,9 @@ Four pages, in a linear flow:
    unrecognized `name` redirects back to `wishes.html`.
 4. **From me** (`from-me.html`, gated via `gate.html`) — her partner's
    own section, in order: an embedded unlisted YouTube/Vimeo video of
-   his recorded birthday message, a "passport" grid of hand-drawn
-   travel illustrations from trips they took together over the past
-   year (sorted chronologically), and his own written wish.
-   **Password-protected** — this is the only gated page.
+   his recorded birthday message, an "our passport" section, and his
+   own written wish. **Password-protected** — this is the only gated
+   page.
 
 Only the video message sits behind a password; the cover, wishes, and
 person pages are shareable without one, closer to a public "guestbook"
@@ -117,12 +116,9 @@ protected, private surprise.
 - Three stacked sections, in order:
   1. Embedded unlisted YouTube/Vimeo video — the partner's recorded
      birthday message.
-  2. "Our passport" — a grid of hand-drawn travel illustrations (one
-     per trip, chronologically ordered), defined in
-     `js/from-me-content.js`. Each image already has its destination
-     and date baked into the artwork, so no separate captions are
-     rendered. A slight alternating rotation per photo gives it a
-     scattered/stamped feel rather than a rigid grid.
+  2. "Our passport" — currently a plain sky-blue block under the
+     heading (placeholder while this section's real content is
+     decided).
   3. "My wish" — the partner's own written wish, same plain-text
      paragraph treatment as a wish on `person.html`.
 - A "← back" link to `wishes.html`.
@@ -191,6 +187,5 @@ viewport detection):
   redirects to `gate.html`; wrong password stays blocked; correct
   password unlocks, redirects to `from-me.html`, and persists across
   navigation within the session.
-- From me: video embed loads and plays; passport grid renders every
-  photo in `js/from-me-content.js` in order; wish text renders; back
-  link returns to `wishes.html`.
+- From me: video embed loads and plays; passport block renders; wish
+  text renders; back link returns to `wishes.html`.

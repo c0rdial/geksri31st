@@ -15,9 +15,8 @@ A birthday site with four pages:
   unrecognized name redirects back to `wishes.html`. A wish's optional
   `images` array renders as a small photo gallery below the wish text.
 - `from-me.html` — her partner's own section: the birthday video message,
-  a "our passport" grid of travel illustrations from the past year
-  (edit the list in `js/from-me-content.js`), then his own wish.
-  Password-protected: visiting it directly redirects to `gate.html` if
+  an "our passport" section (currently a placeholder block), then his
+  own wish. Password-protected: visiting it directly redirects to `gate.html` if
   you haven't entered the password yet.
 
 ## Local development
