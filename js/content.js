@@ -10,13 +10,12 @@ export const wishes = [
   {
     image: 'images/placeholder2.svg',
     name: 'papa',
-    wish: 'Happy Birthday Mogek Sri! Keep being creative, smart and awesome.',
+    wish: 'Happy birthday Gek Sri. Keep exploring the unknown!',
   },
   {
-    // TODO: replace with gek surya's real wish once it comes in.
     image: 'images/gek-surya.jpg',
     name: 'gek surya',
-    wish: 'Happy birthday! Cheers to another trip around the sun with you.',
+    wish: 'Happy birthday to my favorite big sis mogek🩷🩷 you throw the most fabulous parties and i wish i was there to celebrate with you. you are my role model, smartest person i know, gorgeous and forever inspo. Love you and miss you so much🩷',
     images: ['images/gek-surya-2.jpg', 'images/gek-surya-3.jpg', 'images/gek-surya-4.jpg', 'images/gek-surya-5.jpg'],
   },
   {
