@@ -14,10 +14,21 @@
   <link rel="stylesheet" href="css/content.css" />
 </head>
 <body>
+  <a class="page-back" href="wishes.html">← back</a>
+
   <section class="video" aria-label="A message for you">
-    <a class="page-back" href="wishes.html">← back</a>
     <h1 class="page-heading">from me</h1>
     <iframe id="video-embed" class="video__embed" title="Birthday message" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </section>
+
+  <section class="passport" aria-label="Our travels together">
+    <h2 class="page-heading">our passport</h2>
+    <div id="passport-grid" class="passport__grid"></div>
+  </section>
+
+  <section class="wish" aria-label="My wish for you">
+    <h2 class="page-heading">my wish</h2>
+    <p id="from-me-wish" class="wish__text"></p>
   </section>
 
   <script type="module" src="js/from-me-page.js"></script>
