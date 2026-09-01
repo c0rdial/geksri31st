@@ -56,15 +56,13 @@ Before sending the link, do all of the following:
    the one currently at `video/ambient-mobile.mp4` (see `video/README.md`).
    It's shown full-bleed (letterboxed, not cropped) on both the cover page
    and behind the handwritten logo.
-4. **Add the birthday message video** — set `videoEmbedUrl` in
-   `js/video-config.js` to your video's **embed** URL, not the
-   address-bar URL — YouTube: `https://www.youtube.com/embed/VIDEO_ID`
-   (Share → Embed → copy the `src` from the `<iframe>`); Vimeo:
+4. ~~**Add the birthday message video**~~ — done: `videoEmbedUrl` in
+   `js/video-config.js` points at the real message. (For reference:
+   `videoEmbedUrl` must be an **embed** URL, not the address-bar one —
+   YouTube: `https://www.youtube.com/embed/VIDEO_ID`; Vimeo:
    `https://player.vimeo.com/video/VIDEO_ID`. A regular
-   `youtube.com/watch?v=...` or `youtu.be/...` link will NOT load in the
-   iframe. Unlisted videos embed fine; private ones do not. It's currently
-   set to a placeholder — replace it with your real message. Verify it
-   plays.
+   `youtube.com/watch?v=...` or `youtu.be/...` link will NOT load in
+   the iframe. Unlisted videos embed fine; private ones do not.)
 5. **Deploy to Vercel** — from the repo root: `vercel --prod` (or import
    the `c0rdial/geksri31st` GitHub repo in the Vercel dashboard). No
    build command or output directory needed — it's a static site.
