@@ -3,7 +3,7 @@
 // gallery on that person's page, below the main `image` and wish.
 export const wishes = [
   {
-    image: 'images/placeholder1.svg',
+    image: 'images/mama.jpg',
     name: 'mama',
     wish: 'Have a blessed beautiful birthday Gek Sri!',
   },
