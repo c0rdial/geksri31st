@@ -116,9 +116,11 @@ protected, private surprise.
 - Three stacked sections, in order:
   1. Embedded unlisted YouTube/Vimeo video — the partner's recorded
      birthday message.
-  2. "Our passport" — currently a plain sky-blue block under the
-     heading (placeholder while this section's real content is
-     decided).
+  2. "Our passport" — a native `<video controls>` element sourced
+     from `passportVideoSrc` (`js/video-config.js`, currently
+     `video/passport.mp4`), a travel montage of trips taken together
+     over the past year. Sized to the video's natural (portrait)
+     aspect ratio rather than forced to 16:9.
   3. "My wish" — the partner's own written wish, same plain-text
      paragraph treatment as a wish on `person.html`.
 - A "← back" link to `wishes.html`.
@@ -187,5 +189,5 @@ viewport detection):
   redirects to `gate.html`; wrong password stays blocked; correct
   password unlocks, redirects to `from-me.html`, and persists across
   navigation within the session.
-- From me: video embed loads and plays; passport block renders; wish
-  text renders; back link returns to `wishes.html`.
+- From me: video embed loads and plays; passport video loads and
+  plays; wish text renders; back link returns to `wishes.html`.
