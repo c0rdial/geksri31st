@@ -59,8 +59,8 @@ export const wishes = [
   },
   {
     image: 'images/placeholder11.svg',
-    name: 'raf',
-    wish: 'Happy birthday! Excited to celebrate with you.',
+    name: 'rafaela michelle',
+    wish: 'Happy birthday to my girlie, Gek Sri! 🤍 Wishing you endless happiness, love, good health, and many more ridiculous moments 😂 Love you and let’s keep collaborating in friendship and in business. Because we earth babies lovesss making money 🫰🏽♥️',
   },
   {
     image: 'images/zu.jpg',
