@@ -8,7 +8,7 @@ export const wishes = [
     wish: 'Have a blessed beautiful birthday Gek Sri!',
   },
   {
-    image: 'images/placeholder2.svg',
+    image: 'images/papa.jpg',
     name: 'papa',
     wish: 'Happy birthday Gek Sri. Keep exploring the unknown!',
   },
@@ -57,9 +57,10 @@ export const wishes = [
     images: ['images/amika-2.jpg', 'images/amika-3.jpg'],
   },
   {
-    image: 'images/placeholder11.svg',
+    image: 'images/rafaela-michelle.jpg',
     name: 'rafaela michelle',
     wish: 'Happy birthday to my girlie, Gek Sri! 🤍 Wishing you endless happiness, love, good health, and many more ridiculous moments 😂 Love you and let’s keep collaborating in friendship and in business. Because we earth babies lovesss making money 🫰🏽♥️',
+    images: ['images/rafaela-michelle-2.jpg'],
   },
   {
     image: 'images/zu.jpg',
