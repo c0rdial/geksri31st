@@ -28,11 +28,11 @@
 
 .person__gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 12px;
-  max-width: 480px;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 24px;
+  max-width: 560px;
   width: 100%;
-  margin-top: 32px;
+  margin-top: 40px;
 }
 
 .person__gallery:empty {
