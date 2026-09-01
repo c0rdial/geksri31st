@@ -5,12 +5,12 @@ export const wishes = [
   {
     image: 'images/placeholder1.svg',
     name: 'mama',
-    wish: 'Happy 31st birthday! We are so proud of the person you have become. Love you endlessly.',
+    wish: 'Have a blessed beautiful birthday Gek Sri!',
   },
   {
     image: 'images/placeholder2.svg',
     name: 'papa',
-    wish: 'Happy birthday, sweetheart. Wishing you all the joy in the world this year.',
+    wish: 'Happy Birthday Mogek Sri! Keep being creative, smart and awesome.',
   },
   {
     // TODO: replace with gek surya's real wish once it comes in.
@@ -28,7 +28,7 @@ export const wishes = [
   {
     image: 'images/placeholder5.svg',
     name: 'dik gus',
-    wish: 'Happy birthday, kak! Wishing you the best year yet.',
+    wish: 'Happy Birthday Mogek Sri! Keep being creative, smart and awesome.',
   },
   {
     image: 'images/placeholder6.svg',
