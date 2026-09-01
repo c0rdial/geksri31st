@@ -227,15 +227,27 @@
   text-align: center;
 }
 
-.passport__video {
-  display: block;
-  width: 100%;
-  max-width: 420px;
-  max-height: 70vh;
-  height: auto;
+.passport__grid {
+  max-width: 960px;
   margin: 40px auto 0;
-  border-radius: 8px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 48px;
+}
+
+.passport__photo {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
   box-shadow: 0 12px 32px rgba(20, 30, 40, 0.35);
+}
+
+.passport__photo:nth-child(odd) {
+  transform: rotate(-2deg);
+}
+
+.passport__photo:nth-child(even) {
+  transform: rotate(2deg);
 }
 
 .wish {
