@@ -29,10 +29,11 @@ Four pages, in a linear flow:
    wish. Reached only by clicking a photo on the wishes page; an
    unrecognized `name` redirects back to `wishes.html`.
 4. **From me** (`from-me.html`, gated via `gate.html`) — her partner's
-   own section, in order: an embedded unlisted YouTube/Vimeo video of
-   his recorded birthday message, his own written wish, and an "our
-   passport stamp collection" section. **Password-protected** — this
-   is the only gated page.
+   own section: an embedded unlisted YouTube/Vimeo video of his
+   recorded birthday message, followed by "our postcard collection".
+   His own written wish lives as a regular entry (`adam`) in the
+   public wishes list instead of a separate section here.
+   **Password-protected** — this is the only gated page.
 
 Only the video message sits behind a password; the cover, wishes, and
 person pages are shareable without one, closer to a public "guestbook"
@@ -113,12 +114,10 @@ protected, private surprise.
 ### `from-me.html` — From me (password-protected)
 - On load, checks the `sessionStorage` unlock flag; if not set, redirects
   to `gate.html`.
-- Three stacked sections, in order:
+- Two stacked sections, in order:
   1. Embedded unlisted YouTube/Vimeo video — the partner's recorded
      birthday message.
-  2. "My wish" — the partner's own written wish, same plain-text
-     paragraph treatment as a wish on `person.html`.
-  3. "Our passport stamp collection" — a grid of hand-drawn travel
+  2. "Our postcard collection" — a grid of hand-drawn travel
      illustrations (one per trip, chronologically ordered), defined in
      `js/from-me-content.js`. Each image already has its destination
      and date baked into the artwork, so no separate captions are
@@ -191,5 +190,5 @@ viewport detection):
   password unlocks, redirects to `from-me.html`, and persists across
   navigation within the session.
 - From me: video embed loads and plays; passport grid renders every
-  photo in `js/from-me-content.js` in order; wish text renders; back
-  link returns to `wishes.html`.
+  photo in `js/from-me-content.js` in order; back link returns to
+  `wishes.html`.

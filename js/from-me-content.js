@@ -11,6 +11,3 @@ export const passportPhotos = [
   'images/trip-aug-pahang.jpg',
   'images/trip-aug-budapest.jpg',
 ];
-
-// TODO: replace with the real wish before launch.
-export const fromMeWish = 'Placeholder — write your wish here.';

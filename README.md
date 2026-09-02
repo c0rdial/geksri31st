@@ -15,9 +15,10 @@ A birthday site with four pages:
   unrecognized name redirects back to `wishes.html`. A wish's optional
   `images` array renders as a small photo gallery below the wish text.
 - `from-me.html` — her partner's own section: the birthday video message,
-  his own wish, then an "our passport stamp collection" grid of
-  hand-drawn travel illustrations from the past year (edit the list in
-  `js/from-me-content.js`). Password-protected: visiting it directly
+  then an "our postcard collection" grid of hand-drawn travel
+  illustrations from the past year (edit the list in
+  `js/from-me-content.js`). His own wish lives as a regular `adam`
+  entry in the public wishes list instead. Password-protected: visiting it directly
   redirects to `gate.html` if
   you haven't entered the password yet.
 
@@ -73,8 +74,7 @@ Before sending the link, do all of the following:
    and a real phone.
 7. **Remove the placeholders** — delete the placeholder
    `images/placeholder*.svg` files and their entries in `js/content.js`
-   once real content is in, and replace the placeholder `fromMeWish` in
-   `js/from-me-content.js` with your real wish.
+   once real content is in.
 8. **Pick a password you don't reuse elsewhere** — it's stored in plain,
    readable source (`js/gate-page.js`), which is an accepted tradeoff for
    this project but worth knowing before picking one.

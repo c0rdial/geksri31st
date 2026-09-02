@@ -223,7 +223,7 @@
 }
 
 .passport {
-  padding: 96px 24px;
+  padding: 96px 24px 120px;
   text-align: center;
 }
 
@@ -250,17 +250,3 @@
   transform: rotate(2deg);
 }
 
-.wish {
-  padding: 96px 24px 120px;
-  text-align: center;
-}
-
-.wish__text {
-  max-width: 560px;
-  margin: 40px auto 0;
-  color: #fff;
-  text-shadow: 0 1px 8px rgba(20, 30, 40, 0.35);
-  font-size: var(--text-md);
-  line-height: 1.8;
-  white-space: pre-line;
-}

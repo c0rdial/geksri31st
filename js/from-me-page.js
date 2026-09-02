@@ -1,6 +1,6 @@
 import { requireUnlock } from './guard.js';
 import { videoEmbedUrl } from './video-config.js';
-import { passportPhotos, fromMeWish } from './from-me-content.js';
+import { passportPhotos } from './from-me-content.js';
 
 function init() {
   if (!requireUnlock()) return;
@@ -15,8 +15,6 @@ function init() {
     img.alt = '';
     grid.appendChild(img);
   }
-
-  document.getElementById('from-me-wish').textContent = fromMeWish;
 }
 
 document.addEventListener('DOMContentLoaded', init);
