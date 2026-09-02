@@ -67,4 +67,9 @@ export const wishes = [
     name: 'zu',
     wish: 'Happiest birthday gek, im so happy i got to know you. youre such an amazing person, wishing you all the happiness in the world 💙',
   },
+  {
+    image: 'images/adam.jpg',
+    name: 'adam',
+    wish: 'gek sri, happy birthday. 31 looks good on you. i hope this year you get to build the things you’ve been quietly dreaming about, not just for other people this time, but for yourself too. and honestly, out of everywhere life could have taken me, i’m just glad it took me somewhere close to you.\n\n-adam',
+  },
 ];
