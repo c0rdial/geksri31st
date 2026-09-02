@@ -25,7 +25,7 @@ export const wishes = [
     images: ['images/gek-anggi-2.jpg'],
   },
   {
-    image: 'images/placeholder5.svg',
+    image: 'images/dik-gus.jpg',
     name: 'dik gus',
     wish: 'Happy Birthday Mogek Sri! Keep being creative, smart and awesome.',
   },
