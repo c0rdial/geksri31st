@@ -32,7 +32,7 @@ export const wishes = [
   {
     image: 'images/tree.jpg',
     name: 'tree',
-    wish: 'Happy birthday! You bring so much light to everyone around you.',
+    wish: 'Gek!!! I’m so happy we met in this era of our lives. My birthday wish for you is to spend this next year being chaotic and successful in all terrains between Bali and BKK (and beyond duh eurosummer 2k27) 👀 happy birthday you sweet bb virgo. Love love from freaky uncle tree 🤠',
   },
   {
     image: 'images/wulan.jpg',
