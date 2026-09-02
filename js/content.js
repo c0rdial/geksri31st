@@ -40,10 +40,9 @@ export const wishes = [
     wish: 'Hiii Mokgek,\n\nhappy birthday to my coolest girlll!❤️\n\nTo the one of the kindest, baddies girl out there 🫶 being around you feel so love, fun and crazy at the same time wkwk.\n\ngrateful for all the years we’ve shared and excited for many more to come love you loads!',
   },
   {
-    // TODO: replace with jennifer's real wish once it comes in.
     image: 'images/jennifer.jpg',
     name: 'jennifer',
-    wish: 'Happy birthday! Here is to another amazing year ahead.',
+    wish: 'happy b day hope i’ll see u soon !',
     images: ['images/jennifer-2.jpg', 'images/jennifer-3.jpg', 'images/jennifer-4.jpg'],
   },
   {
