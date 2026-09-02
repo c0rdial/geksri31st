@@ -35,9 +35,9 @@ export const wishes = [
     wish: 'Happy birthday! You bring so much light to everyone around you.',
   },
   {
-    image: 'images/placeholder7.svg',
+    image: 'images/wulan.jpg',
     name: 'wulan',
-    wish: 'Happy birthday! So grateful to have you in my life.',
+    wish: 'Hiii Mokgek,\n\nhappy birthday to my coolest girlll!❤️\n\nTo the one of the kindest, baddies girl out there 🫶 being around you feel so love, fun and crazy at the same time wkwk.\n\ngrateful for all the years we’ve shared and excited for many more to come love you loads!',
   },
   {
     image: 'images/placeholder8.svg',
