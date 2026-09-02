@@ -1,6 +1,6 @@
 import { checkPassword, unlock } from './gate.js';
 
-const SITE_PASSWORD = 'gek31'; // TODO: change before launch
+const SITE_PASSWORD = 'hbdily';
 
 function init() {
   const form = document.getElementById('gate-form');
